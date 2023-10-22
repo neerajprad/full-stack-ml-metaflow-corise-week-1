@@ -78,6 +78,8 @@ class BaselineNLPFlow(FlowSpec):
         current.card.append(Markdown("# Womens Clothing Review Results"))
         current.card.append(Markdown("## Overall Accuracy"))
         current.card.append(Artifact(self.base_acc))
+        current.card.append(Markdown("## Overall AUC"))
+        current.card.append(Artifact(self.base_rocauc))
 
         current.card.append(Markdown("## Examples of False Positives"))
         # TODO: compute the false positive predictions where the baseline is 1 and the valdf label is 0.
